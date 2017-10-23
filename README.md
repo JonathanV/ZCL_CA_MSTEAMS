@@ -3,20 +3,20 @@ SAP ABAP -> MS Team integration
 POST ms-team message from SAP with ABAP (via webhook)
 
 USAGE:
-*-------------------------------------------
-* ABAP 7.40 and+
-*-------------------------------------------
-*Simple post using json payload
-*---------------------------------------
+"-------------------------------------------
+" ABAP 7.40 and+
+"-------------------------------------------
+"Simple post using json payload
+"---------------------------------------
 zcl_ca_msteams=>post_to_teams( EXPORTING url = webhook_url payload = '{"TITLE":"Title!","TEXT":"main!","themecolor":"6FA0ED"}' ).
-*---------------------------------------
+"---------------------------------------
 
-*---------------------------------------
-*Simple post using message_card document
-*---------------------------------------
-zcl_ca_msteams=>post_to_teams( url = webhook_url
-                               message_card = value zcl_ca_msteams=>ty_message_card(
-                                    title = 'Hi'
+"---------------------------------------
+"Simple post using message_card document
+"---------------------------------------
+zcl_ca_msteams=>post_to_teams( 	url = webhook_url
+								message_card = value zcl_ca_msteams=>ty_message_card(
+								title = 'Hi'
                                     text = 'This is the main text'
                                     themecolor = '6FA0ED'
                                )
