@@ -23,9 +23,9 @@ zcl_ca_msteams=>post_to_teams( 	url = webhook_url
                              ).
 
 
-*---------------------------------------
-*instance & more complex message
-*---------------------------------------
+"---------------------------------------
+"instance & more complex message
+"---------------------------------------
 data(message) = value zcl_ca_msteams=>ty_message_card(
                         title = 'Post Title'
                         text = 'This is the main text'
@@ -51,7 +51,7 @@ data(o_teams) = new zcl_ca_msteams( url = webhook_url
                                     message_card = message ).
 o_teams->post( ).
 
-*or
+"or
 
 zcl_ca_msteams=>post_to_teams( url = webhook_url
                               message = value zcl_ca_msteams=>ty_message_card(
@@ -75,9 +75,9 @@ zcl_ca_msteams=>post_to_teams( url = webhook_url
                                       ) 
                              ).
 
-*-------------------------------------------
-*pre-740 abap way
-*-------------------------------------------
+"-------------------------------------------
+"pre-740 abap way
+"-------------------------------------------
 DATA: lv_message type zcl_ca_msteams=>ty_message_card,
       lv_section type zcl_ca_msteams=>ty_sections,
       lt_section type zcl_ca_msteams=>tty_sections.
@@ -100,9 +100,9 @@ lv_message-sections = lt_section.
 data(o_teams2) = new zcl_ca_msteams( url = webhook_url
                                     message_card = lv_message ).
 o_teams2->post( ).
-*-------------------------------------------
 
-
+"-------------------------------------------
 Reference:
 https://docs.microsoft.com/en-us/outlook/actionable-messages/
+
 https://docs.microsoft.com/en-us/outlook/actionable-messages/actionable-messages-via-connectors
