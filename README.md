@@ -15,10 +15,10 @@ zcl_ca_msteams=>post_to_teams( EXPORTING url = webhook_url payload = '{"TITLE":"
 "Simple post using message_card document
 "---------------------------------------
 zcl_ca_msteams=>post_to_teams( 	url = webhook_url
-								message_card = value zcl_ca_msteams=>ty_message_card(
-								title = 'Hi'
-                                    text = 'This is the main text'
-                                    themecolor = '6FA0ED'
+				message_card = value zcl_ca_msteams=>ty_message_card(
+				title = 'Hi'
+                                text = 'This is the main text'
+                                themecolor = '6FA0ED'
                                )
                              ).
 
